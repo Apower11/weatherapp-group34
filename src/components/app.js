@@ -26,7 +26,7 @@ export default class App extends Component {
 		A render method to display the required Component on screen (iPhone or iPad) : selected by checking component's isTablet state
 	*/
 	render(){
-		if(this.state.isTablet){
+		if(!this.state.isTablet){
 			return (
 				<div id="app">
 					<Ipad/ >

@@ -41,16 +41,81 @@ export default class Ipad extends Component {
 
 		// display all weather data
 		return (
-			<div class={ style.container }>
+			<div class={ style.main_container }>
+				<nav class={ style.navbar }>
+					<span class="material-symbols-outlined menu-icon">menu</span>
+					<span class="material-symbols-outlined tune-icon">tune</span>
+				</nav>
+	<div class="timeline">
+  <div class="container right grey">
+    <div class="date">
+		<div class="time">07:30</div>
+		<div class="location">London</div>
+	</div>
+    <i class="icon fa fa-gift">
+		<span class="material-symbols-outlined">cloud</span>
+	</i>
+	<div class="weather-info">
+		<div class="temperature">11°C</div>
+		<div class="conditions">Cloudy</div>
+	</div>
+  </div>
+  <div class="container right light_blue">
+  <div class="date">
+		<div class="time">07:30</div>
+		<div class="location">London</div>
+	</div>
+    <i class="icon fa fa-gift">
+		<span class="material-symbols-outlined">air</span>
+	</i>
+	<div class="weather-info">
+		<div class="temperature">11°C</div>
+		<div class="conditions">Windy</div>
+	</div>
+  </div>
+  <div class="container right yellow">
+    <div class="date">
+		<div class="time">07:30</div>
+		<div class="location">London</div>
+	</div>
+    <i class="icon fa fa-gift">
+		<span class="material-symbols-outlined">sunny</span>
+	</i>
+	<div class="weather-info">
+		<div class="temperature">11°C</div>
+		<div class="conditions">Sunny</div>
+	</div>
+  </div>
+  <div class="container right dark_blue">
+    <div class="date">
+		<div class="time">07:30</div>
+		<div class="location">London</div>
+	</div>
+	<i class="icon fa fa-gift">
+		<span class="material-symbols-outlined night-icon">clear_night</span>
+	</i>
+	<div class="weather-info">
+		<div class="temperature">11°C</div>
+		<div class="conditions">Night</div>
+	</div>
+  </div>
+  <span class="material-symbols-outlined add-timestamp-button-tablet">add</span>
+</div>
 				<div class={ style.header }>
-					<div class={ style.city }>{ this.state.currentCity }</div>
-					<div class={ style.country }>{ this.state.currentCountry }</div>
+					<div class={ style.city }>{ this.state.locate }</div>
 					<div class={ style.conditions }>{ this.state.cond }</div>
-					<span class={ style.temperature }>{ this.state.temp }</span>
+					<span class={ tempStyles }>{ this.state.temp }</span>
 				</div>
 				<div class={ style.details }></div>
-				<div class={ style_ipad.container }>
-					{ this.state.display ? <Button class={ style_ipad.button } clickFunction={ this.fetchWeatherData }/ > : null }
+				{/* <div class= { style_iphone.container }> 
+					{ this.state.display ? <Button class={ style_iphone.button } clickFunction={ this.fetchWeatherData }/ > : null }
+				</div> */}
+				<div class={ style.bullet_points }>
+					<div class={style.bullet_point}></div>
+					<div class={style.bullet_point}></div>
+					<div class={style.bullet_point_active}></div>
+					<div class={style.bullet_point}></div>
+					<div class={style.bullet_point}></div>
 				</div>
 			</div>
 		);
